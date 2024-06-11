@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+
+}
+
+.body{
+    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+    width: 100%;
+    height: 600px;
+    /*max-width: 1500px;*/
+    padding:5px;
+    /*background-color: blue;*/
+    
+    display: grid;
+    gap: 5px;
+        grid-template-areas:
+        'header header header header header'
+        'main main main main main'
+        'main main main main main'
+        'main main main main main'
+        'footer footer footer footer footer';
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: linear-gradient(hsl(320, 84%, 56%),#291629) ;
+    grid-area: header;
+}
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8a688bd8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-field {
+    margin-bottom: 10px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cc87c3;
+    border-radius: 5px;
+  }
+  
+  .form-field textarea {
+    height: 100px;
+  }
+  
+  /* Estilos para centrar el botón */
+  .form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*button{
+    cursor: pointer;
+}*/
+
+/*carrusel*/
+
+.bg-carousel-ba1 { background-image: url(../img/ban1.jpeg); }
+.bg-carousel-ba2 { background-image: url(../img/ban2.jpeg); }
+.bg-carousel-ba3 { background-image: url(../img/ban3.jpeg); }
+
+.carousel-item {
+  background-size: cover;
+  background-position: center center;
+}
+.carousel-item svg { opacity: .5; }
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  text-align: left;
+
+}
+
+.carousel-item {
+  height: 37rem;
+  min-height: 95vh;
+}
+
+.tarjeta {
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #727272;
+    margin: 15px;
+      
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.tarjeta button {
+    cursor: pointer;
+    background-color: #291629;
+    color: #ecb6cf;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0; /* Añade margen superior al botón */
+}
+.textocard {
+    padding: 10px;
+  
+}
+
+.tarjeta a {
+    color: blanchedalmond;
+    font-size: 23px;
+    text-decoration: none;
+    background-color: dimgray;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    
+}
+
+.contenedor p {
+    padding: 10px 0px;
+}
+
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.footer {
+    background-color: #291629;
+    text-align: center;
+    color: #ecb6cf;
+    grid-area: footer;
+    text-align: center;
+    padding: 40px 0px 0px;
+}
+
+.footer .redes a {
+    text-decoration: none;
+    color: #ecb6cf;
+    display: inline-block;
+    margin: 20px 10px;
+    transition: 0.5s;
+}
+
+
+.footer .redes a:hover {
+    color: hsl(320, 84%, 56%);
+}
+
+
+.logo{
+    max-width: 5rem;
+
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+     
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #e781b1 ;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.main{
+    background-color: #ddcdd4;
+    grid-area: main;
+}
+
+
+/*@media screen and (max-width: 550px) */
+@media screen and  (max-width: 650px) {
+
+    .body{
+        grid-template-areas:
+        'header header header header header'
+        'main main main main main'
+        'main main main main main'
+        'footer footer footer footer footer';
+    }
+
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        color: #ecb6cf ;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /*background: linear-gradient(hsl(320,84%,56%),#291629);*/
+        background: #291629;
+        z-index: 1050;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0,0,0,.5);
+        
+    } 
+
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        z-index: 1050;
+            
+    }
+  
+    .nav-list li a {
+         color: #ecb6cf ;
+         transition: all 300ms ease-out;
+    }
+}
+
+
+
